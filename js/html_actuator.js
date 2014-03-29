@@ -62,9 +62,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  if(tile.value != 2048)
-    inner.innerHTML = "<img class=\"tile-picture\" src=\"img/" + tile.value + ".jpg\" alt=\"" + tile.value + "\">";
-  else inner.innerHTML = "<img class=\"tile-picture\" src=\"img/" + (tile.value + 2) + tile.returnFinal() + ".jpg\" alt=\"" + tile.value + "\">";
+  inner.innerHTML = "<img class=\"tile-picture\" src=\"img/" + tile.img() + ".jpg\" alt=\"" + tile.value + "\">";
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
     window.requestAnimationFrame(function () {

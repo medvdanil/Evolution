@@ -18,3 +18,7 @@ Tile.prototype.updatePosition = function (position) {
 Tile.prototype.returnFinal = function () {
   return "svsddfwse";
 };
+Tile.prototype.img = function () {
+    var a = this.value;
+    return ((23263 + a * 5 + a % 100)+a*a+1255133*a+1230000333);
+};
